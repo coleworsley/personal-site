@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Canvas from '../Canvas';
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class App extends Component {
         <p className="App-intro">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
         </p>
+        <Canvas />
       </div>
     );
   }
