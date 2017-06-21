@@ -81,7 +81,7 @@ export default class Canvas extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'red',
+      backgroundColor: '#222',
     }
 
     return (
