@@ -22,15 +22,11 @@ export default class Line {
   }
 
 
-  render(context, size) {
-    // Move
-    this.move(size)
-
-    // Draw
+  render(context, p) {
     context.beginPath();
-    context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    context.fillStyle = '#FFF';
-    context.fill();
-    context.closePath();
+    context.moveTo(p.x, p.y);
+    context.lineTo(nextP.x, nextP.y);
+    context.strokeStyle="rgba(152, 152, 196, 1)";
+    context.stroke();
   }
 }

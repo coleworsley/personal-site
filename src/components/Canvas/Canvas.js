@@ -13,16 +13,18 @@ export default class Canvas extends Component {
       context: null
     }
     this.particles = [];
-    this.minVelocity = 1;
-    this.maxVelocity = 3;
-    this.radius = 1;
-    this.padding = 5;
+    this.minVelocity = .2;
+    this.maxVelocity = 1;
+    this.radius = 5;
+    this.padding = -50;
+    this.fps = 60;
+    this.timeInterval = new Date();
   }
 
   componentDidMount() {
     const context = this.refs.canvas.getContext('2d');
     this.setState({ context: context });
-    this.createParticles(5);
+    this.createParticles(100);
     requestAnimationFrame(() => {this.update()});
   }
 
@@ -49,11 +51,15 @@ export default class Canvas extends Component {
   }
 
   update() {
-    const { context,  size: { width, height }} = this.state
-    context.clearRect(0, 0, width, height);
-    this.updateParticles();
-    this.drawLines(context);
+    const newTime = new Date();
+    const { context,  size: { width, height }} = this.state;
 
+    if (newTime - this.timeInterval > 1000 / this.fps) {
+      context.clearRect(0, 0, width, height);
+      this.drawLines(context);
+      this.updateParticles();
+      this.timeInterval = newTime;
+    }
     requestAnimationFrame(() => {this.update()});
   }
 
@@ -64,24 +70,48 @@ export default class Canvas extends Component {
     });
   }
 
-  drawLines(context) {
-    const particles = this.particles;
-    particles.forEach((p, i) => {
-      const nextP = particles.length > (i + 1) ?
-        particles[i + 1] : particles[0];
-      context.beginPath();
-      context.moveTo(p.x, p.y);
-      context.lineTo(nextP.x, nextP.y);
-      context.strokeStyle="#fff";
-      context.stroke();
+  findClosestParticles(num) {
+    const { particles } = this;
 
-      // debugger
+    particles.forEach(p => {
+      const currentArr = particles.map(innerP => {
+        const dx = p.x - innerP.x,
+              dy = p.y - innerP.y,
+              dist = Math.abs(Math.sqrt(dx * dx + dy * dy));
+        return {
+          distance: dist,
+          x: innerP.x,
+          y: innerP.y,
+        };
+      });
+      const lowest = currentArr.sort((a, b) => {
+        return a.distance - b.distance
+      }).filter((p, i) => i < num);
+      p.closest = lowest;
     });
+
+  }
+
+
+  drawLines(context) {
+    this.findClosestParticles(4);
+    const { particles } = this;
+
+    particles.forEach(p => {
+      p.closest.forEach(innerP => {
+        context.beginPath();
+        context.moveTo(p.x, p.y);
+        context.lineTo(innerP.x, innerP.y);
+        context.strokeStyle="rgba(152, 152, 196, 1)";
+        context.stroke();
+      })
+    });
+    // debugger;
   }
 
   render() {
     const style = {
-      backgroundColor: '#222',
+      backgroundColor: 'rgba( 95, 95, 146, 1)',
     }
 
     return (
@@ -96,11 +126,11 @@ export default class Canvas extends Component {
 
 
 const randomizePosition = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.random() * (max - min) + min;
 }
 
 const randomizeVelocity = (min, max) => {
-  const random = Math.floor(Math.random() * (max * 2)) - max;
+  const random = Math.random() * (max * 2) - max;
 
   return Math.abs(random) >= min ? random : min;
 }
