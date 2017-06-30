@@ -31,7 +31,7 @@ export default class Particle {
     // Draw
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    context.fillStyle = '#FFF';
+    context.fillStyle = '#fff';
     context.fill();
     context.closePath();
   }

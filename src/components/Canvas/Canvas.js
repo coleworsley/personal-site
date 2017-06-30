@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Canvas.css';
 import Particle from './Particle';
 
 export default class Canvas extends Component {
@@ -8,14 +7,14 @@ export default class Canvas extends Component {
     this.state = {
       size: {
         width: window.innerWidth,
-        height: 400,
+        height: window.innerHeight,
       },
       context: null
     }
     this.particles = [];
     this.minVelocity = .2;
     this.maxVelocity = 1;
-    this.radius = 5;
+    this.radius = 4;
     this.padding = -50;
     this.fps = 60;
     this.timeInterval = new Date();
@@ -89,9 +88,7 @@ export default class Canvas extends Component {
       }).filter((p, i) => i < num);
       p.closest = lowest;
     });
-
   }
-
 
   drawLines(context) {
     this.findClosestParticles(4);
@@ -102,16 +99,15 @@ export default class Canvas extends Component {
         context.beginPath();
         context.moveTo(p.x, p.y);
         context.lineTo(innerP.x, innerP.y);
-        context.strokeStyle="rgba(152, 152, 196, 1)";
+        context.strokeStyle="#fff";
         context.stroke();
       })
     });
-    // debugger;
   }
 
   render() {
     const style = {
-      backgroundColor: 'rgba( 95, 95, 146, 1)',
+      backgroundColor: '#89B7ED',
     }
 
     return (

@@ -1,29 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
-import Canvas from '../Canvas/Canvas';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      page: 'about',
-    }
-  }
-
-
+class About extends Component {
   render() {
     return (
-      <div className="App">
-        <Canvas />
-        <div className="App-header">
-          <h2>About</h2>
-        </div>
-        <p className="App-intro">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-        </p>
+      <div className="about-section">
+        <p>Hello there it worked</p>
       </div>
     );
   }
 }
 
-export default App;
+export default About;
