@@ -13,8 +13,8 @@ export default class Canvas extends Component {
     }
     this.particles = [];
     this.minVelocity = .2;
-    this.maxVelocity = 1;
-    this.radius = 4;
+    this.maxVelocity = .6;
+    this.maxRadius = 5;
     this.padding = -50;
     this.fps = 60;
     this.timeInterval = new Date();
@@ -32,14 +32,15 @@ export default class Canvas extends Component {
     const {
             minVelocity,
             maxVelocity,
-            radius,
+            maxRadius,
             padding,
           } = this;
 
     for (let i = 0; i < count; i++) {
+      const radius = randomize(1, maxRadius);
       const position = {
-        x: randomizePosition(radius + padding, width - radius - padding),
-        y: randomizePosition(radius + padding, height - radius - padding),
+        x: randomize(radius + padding, width - radius - padding),
+        y: randomize(radius + padding, height - radius - padding),
         radius,
         xVelocity: randomizeVelocity(minVelocity, maxVelocity),
         yVelocity: randomizeVelocity(minVelocity, maxVelocity),
@@ -121,7 +122,7 @@ export default class Canvas extends Component {
 }
 
 
-const randomizePosition = (min, max) => {
+const randomize = (min, max) => {
   return Math.random() * (max - min) + min;
 }
 
