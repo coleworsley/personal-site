@@ -1,26 +1,55 @@
+/*Global Selectors*/
 * {
   box-sizing: border-box;
 }
 
-html, body, input, h1, h2, h3, p, table {
+html, body, input, h1, h2, h3, p, table, ul, li {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: sans-serif;
+  /*color: #fff;*/
+  color: #303030;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .app {
   position: relative;
 }
 
+/*Components*/
+
 .nav-bar {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   background: none;
-  border: solid 2px #A7A6A7;
-  background-color: #FFF;
-  height: 100vh;
+}
+
+.nav-title,
+.nav-list {
+  padding: 20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  padding: 10px;
+}
+
+.home {
+  position: absolute;
+  left: 20%;
+  top: 50%;
 }
 
 .about-section {

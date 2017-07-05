@@ -3,12 +3,12 @@ import React from 'react';
 export const NavBar = () => {
   return (
     <nav className='nav-bar'>
-      <h1>Cole Worsley</h1>
-      <ul>
-        <li>Welcome</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+      <h1 className='nav-title'>CW</h1>
+      <ul className='nav-list'>
+        <li className='nav-link'>Welcome</li>
+        <li className='nav-link'>About</li>
+        <li className='nav-link'>Projects</li>
+        <li className='nav-link'>Contact</li>
       </ul>
     </nav>
   )

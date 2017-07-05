@@ -14,17 +14,17 @@ export default class Canvas extends Component {
     this.particles = [];
     this.minVelocity = .2;
     this.maxVelocity = .6;
-    this.maxRadius = 5;
+    this.maxRadius = .5;
     this.padding = -50;
-    this.fps = 60;
+    this.fps = 50;
     this.timeInterval = new Date();
   }
 
   componentDidMount() {
     const context = this.refs.canvas.getContext('2d');
-    this.setState({ context: context });
-    this.createParticles(100);
+    this.createParticles(50);
     requestAnimationFrame(() => {this.update()});
+    this.setState({ context: context });
   }
 
   createParticles(count) {
@@ -37,7 +37,7 @@ export default class Canvas extends Component {
           } = this;
 
     for (let i = 0; i < count; i++) {
-      const radius = randomize(1, maxRadius);
+      const radius = randomize(.7, maxRadius);
       const position = {
         x: randomize(radius + padding, width - radius - padding),
         y: randomize(radius + padding, height - radius - padding),
@@ -92,7 +92,7 @@ export default class Canvas extends Component {
   }
 
   drawLines(context) {
-    this.findClosestParticles(4);
+    this.findClosestParticles(8);
     const { particles } = this;
 
     particles.forEach(p => {
@@ -100,7 +100,7 @@ export default class Canvas extends Component {
         context.beginPath();
         context.moveTo(p.x, p.y);
         context.lineTo(innerP.x, innerP.y);
-        context.strokeStyle="#fff";
+        context.strokeStyle="rgba(129, 128, 127, 0.65)";
         context.stroke();
       })
     });
@@ -108,7 +108,8 @@ export default class Canvas extends Component {
 
   render() {
     const style = {
-      backgroundColor: '#89B7ED',
+      // backgroundColor: '#535353',
+      backgroundColor: '#fff',
     }
 
     return (
@@ -123,11 +124,11 @@ export default class Canvas extends Component {
 
 
 const randomize = (min, max) => {
-  return Math.random() * (max - min) + min;
+  return Math.floor((Math.random() * (max - min) + min) * 100) / 100;
 }
 
 const randomizeVelocity = (min, max) => {
   const random = Math.random() * (max * 2) - max;
 
-  return Math.abs(random) >= min ? random : min;
+  return Math.floor((Math.abs(random) >= min ? random : min) * 100) / 100;
 }
