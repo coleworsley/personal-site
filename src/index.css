@@ -22,12 +22,19 @@ ul {
   position: relative;
 }
 
-/*Components*/
+/*
+=============================
+-------- Components ---------
+=============================
+*/
+
+/*Navigation*/
 
 .nav-bar {
   position: absolute;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   background: none;
 }
@@ -43,14 +50,40 @@ ul {
 }
 
 .nav-link {
-  padding: 10px;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
+.nav-link:hover {
+  background-color: darkgrey;
+}
+
+/*Home*/
 
 .home {
   position: absolute;
-  left: 20%;
+  left: 15%;
   top: 50%;
 }
+
+.home * {
+  padding: 10px 0;
+}
+
+.home-title {
+  font-size: 40px;
+}
+
+.home-subtitle {
+  font-size: 20px;
+}
+
+
+
+
+
 
 .about-section {
   position: absolute;
