@@ -22,7 +22,7 @@ export default class Canvas extends Component {
 
   componentDidMount() {
     const context = this.refs.canvas.getContext('2d');
-    this.createParticles(50);
+    this.createParticles(100);
     requestAnimationFrame(() => {this.update()});
     this.setState({ context: context });
   }
@@ -72,11 +72,10 @@ export default class Canvas extends Component {
 
   findClosestParticles(num) {
     const { particles } = this;
-
-    particles.forEach(p => {
+    particles.forEach(currentP => {
       const currentArr = particles.map(innerP => {
-        const dx = p.x - innerP.x,
-              dy = p.y - innerP.y,
+        const dx = currentP.x - innerP.x,
+              dy = currentP.y - innerP.y,
               dist = Math.abs(Math.sqrt(dx * dx + dy * dy));
         return {
           distance: dist,
@@ -84,15 +83,17 @@ export default class Canvas extends Component {
           y: innerP.y,
         };
       });
-      const lowest = currentArr.sort((a, b) => {
-        return a.distance - b.distance
-      }).filter((p, i) => i < num);
-      p.closest = lowest;
+
+      currentP.closest = currentArr
+        .filter(particle => particle.distance < 250)
+        .map(particle => Object.assign(particle, {
+          opacity: (1 - (particle.distance / 250)) / 2,
+        }))
     });
   }
 
   drawLines(context) {
-    this.findClosestParticles(8);
+    this.findClosestParticles();
     const { particles } = this;
 
     particles.forEach(p => {
@@ -100,7 +101,7 @@ export default class Canvas extends Component {
         context.beginPath();
         context.moveTo(p.x, p.y);
         context.lineTo(innerP.x, innerP.y);
-        context.strokeStyle="rgba(129, 128, 127, 0.65)";
+        context.strokeStyle=`rgba(129, 128, 127, ${innerP.opacity})`;
         context.stroke();
       })
     });
