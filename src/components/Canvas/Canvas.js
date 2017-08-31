@@ -85,9 +85,9 @@ export default class Canvas extends Component {
       });
 
       currentP.closest = currentArr
-        .filter(particle => particle.distance < 250)
+        .filter(particle => particle.distance < 150)
         .map(particle => Object.assign(particle, {
-          opacity: (1 - (particle.distance / 250)) / 2,
+          opacity: (1 - (particle.distance / 150)) / 2,
         }))
     });
   }
