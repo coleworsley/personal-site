@@ -28,37 +28,6 @@ ul {
 =============================
 */
 
-/*Navigation*/
-
-.nav-bar {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: none;
-}
-
-.nav-title,
-.nav-list {
-  padding: 20px;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-link {
-  margin: 10px;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.nav-link:hover {
-  background-color: darkgrey;
-}
 
 /*Home*/
 
