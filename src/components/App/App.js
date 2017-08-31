@@ -4,6 +4,8 @@ import About from '../About/About';
 import { NavBar } from '../NavBar/NavBar';
 import { Home } from '../Home/Home';
 import { Route } from 'react-router-dom';
+import { Contact } from '../Contact/Contact';
+import { Projects } from '../Projects/Projects';
 
 class App extends Component {
   constructor() {
@@ -19,10 +21,10 @@ class App extends Component {
       <div className="app">
         <NavBar />
         <Home />
-        <Route exact to='/' component={Home}/>
-        <Route exact to='/about' component={About}/>
-        <Route exact to='/about' component={About}/>
-        <Route exact to='/about' component={About}/>
+        <Route path='/' component={Home}/>
+        <Route exact path='/about' component={About}/>
+        <Route exact path='/projects' component={Projects}/>
+        <Route exact path='/contact' component={Contact}/>
         <Canvas />
       </div>
     );
