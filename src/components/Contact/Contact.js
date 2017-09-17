@@ -26,7 +26,7 @@ export class Contact extends Component {
 
     return (
       <div className='contact'>
-        <h1 className='contact-title'>Contact Me</h1>
+        <h1 className='contact__title'>Contact Me</h1>
         <form className='contact__form' autoComplete='off'>
           <input
             className='contact__input'
@@ -64,7 +64,7 @@ export class Contact extends Component {
             onChange={(e) => this.handleChange(e)}
           >
           </textarea>
-          <input type='submit' value='Send' />
+          <input type='submit' value='Send' className='contact__submit'/>
         </form>
       </div>
     )
