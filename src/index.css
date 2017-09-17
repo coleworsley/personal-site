@@ -10,16 +10,9 @@ html, body, input, h1, h2, h3, p, table, ul, li {
 
 body {
   font-family: sans-serif;
-  /*color: #fff;*/
   color: #303030;
 }
 
 ul {
   list-style-type: none;
 }
-
-/*
-=============================
--------- Components ---------
-=============================
-*/

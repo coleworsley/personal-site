@@ -1,3 +1,29 @@
 .contact {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
   background: transparent;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__title-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-box__input {
+
+}
+
+.contact__input {
+  background-color: rgb(215, 215, 215);
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  flex-grow: 1;
 }
