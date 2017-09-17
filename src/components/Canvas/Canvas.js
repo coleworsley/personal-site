@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Particle from './Particle';
+import './Canvas.css';
 
 export default class Canvas extends Component {
   constructor() {
@@ -114,7 +115,7 @@ export default class Canvas extends Component {
     }
 
     return (
-      <canvas ref="canvas"
+      <canvas className='canvas' ref="canvas"
         width={this.state.size.width}
         height={this.state.size.height}
         style={style}

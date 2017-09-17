@@ -1,0 +1,46 @@
+.contact {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.contact__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__title-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__submit,
+.contact__input {
+  background-color: rgb(215, 215, 215);
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+.contact__submit {
+  background-color: rgb(147, 160, 244);
+  box-shadow: none;
+  color: #FFF;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+
+.contact__submit:hover {
+  background-color: rgb(87, 101, 194);
+  box-shadow: 3px 6px 0px #9AA3A8;
+}
