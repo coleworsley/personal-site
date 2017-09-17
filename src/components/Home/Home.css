@@ -1,0 +1,17 @@
+.home {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+}
+
+.home * {
+  padding: 10px 0;
+}
+
+.home-title {
+  font-size: 40px;
+}
+
+.home-subtitle {
+  font-size: 20px;
+}
