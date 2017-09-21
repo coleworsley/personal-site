@@ -4,9 +4,9 @@ import './About.css';
 class About extends Component {
   render() {
     return (
-      <div className="about-section">
+      <section className='about tab'>
         <p>Hello there it worked</p>
-      </div>
+      </section>
     );
   }
 }
