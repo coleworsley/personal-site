@@ -25,7 +25,7 @@ export class Contact extends Component {
     const { name, email, subject, message } = this.state;
 
     return (
-      <div className='contact'>
+      <div className='contact tab'>
         <h1 className='contact__title'>Contact Me</h1>
         <form className='contact__form' autoComplete='off'>
           <input

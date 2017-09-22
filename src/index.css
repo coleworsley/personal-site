@@ -16,3 +16,20 @@ body {
 ul {
   list-style-type: none;
 }
+
+
+.tab {
+  transition: all 1s ease;
+  animation-name: tab;
+  animation-duration: 1s; 
+}
+
+@keyframes tab {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
