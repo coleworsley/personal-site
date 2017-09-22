@@ -12,7 +12,7 @@ class App extends Component {
     super();
     this.state = {
       page: 'About',
-    }
+    };
   }
 
   render() {
@@ -20,10 +20,10 @@ class App extends Component {
       <div className="app">
         <NavBar />
         <Canvas />
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/projects" component={Projects}/>
-        <Route exact path="/contact" component={Contact}/>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
       </div>
     );
   }

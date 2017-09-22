@@ -13,9 +13,9 @@ export default class Canvas extends Component {
       context: null
     }
     this.particles = [];
-    this.minVelocity = .2;
-    this.maxVelocity = .6;
-    this.maxRadius = .5;
+    this.minVelocity = 0.2;
+    this.maxVelocity = 0.6;
+    this.maxRadius = 0.5;
     this.padding = -50;
     this.fps = 50;
     this.timeInterval = new Date();
@@ -31,11 +31,11 @@ export default class Canvas extends Component {
   createParticles(count) {
     const { width, height } = this.state.size;
     const {
-            minVelocity,
-            maxVelocity,
-            maxRadius,
-            padding,
-          } = this;
+      minVelocity,
+      maxVelocity,
+      maxRadius,
+      padding,
+    } = this;
 
     for (let i = 0; i < count; i++) {
       const radius = randomize(.7, maxRadius);
