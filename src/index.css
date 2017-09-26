@@ -6,6 +6,7 @@
 html, body, input, h1, h2, h3, p, table, ul, li {
   margin: 0;
   padding: 0;
+  color: rgb(61, 61, 61);
 }
 
 body {
@@ -21,7 +22,7 @@ ul {
 .tab {
   transition: all 1s ease;
   animation-name: tab;
-  animation-duration: 1s; 
+  animation-duration: 1s;
 }
 
 @keyframes tab {
