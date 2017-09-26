@@ -4,7 +4,7 @@ import Canvas from '../Canvas/Canvas';
 import About from '../About/About';
 import NavBar from '../NavBar/NavBar';
 import { Home } from '../Home/Home';
-import { Contact } from '../Contact/Contact';
+import Contact from '../Contact/Contact';
 import { Projects } from '../Projects/Projects';
 
 class App extends Component {
