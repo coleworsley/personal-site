@@ -14,7 +14,7 @@ import './index.css';
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route path='/' component={App}/>
+      <Route path="/" component={App} />
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root'));

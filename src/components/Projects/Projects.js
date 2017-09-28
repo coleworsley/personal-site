@@ -1,10 +1,11 @@
 import React from 'react';
 
-export const Projects = () => {
+const Projects = () => {
   return (
-    <div className='projects tab'>
+    <div className="projects tab">
       <p>this is the projects tab</p>
-
     </div>
-  )
-}
+  );
+};
+
+export default Projects;
