@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Canvas from '../Canvas/Canvas';
 import About from '../About/About';
@@ -7,7 +7,14 @@ import Home from '../Home/Home';
 import Contact from '../Contact/Contact';
 import Projects from '../Projects/Projects';
 
-class App {
+const initialState = {};
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = initialState;
+  }
+
   render() {
     return (
       <div className="app">

@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import store, { history } from './store';
-import { Provider } from 'react-redux';
-
 import { ConnectedRouter } from 'react-router-redux';
+import { Provider } from 'react-redux';
 import { Route } from 'react-router-dom';
 
+import store, { history } from './store';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
