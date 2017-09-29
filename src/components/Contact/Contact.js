@@ -66,7 +66,6 @@ class Contact extends Component {
           />
           <input type="submit" value="Send" className="contact__submit" />
         </form>
-        <ResumePopout />
       </div>
     );
   }
