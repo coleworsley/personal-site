@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ResumePopout from './ResumePopout';
 import './Contact.css';
 
 const initialState = {

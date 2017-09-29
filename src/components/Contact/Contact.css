@@ -1,8 +1,9 @@
 .contact {
   position: absolute;
+  width: 320px;
+  margin-left: -160px;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
+  top: 30%;
   background: transparent;
 }
 
@@ -38,7 +39,6 @@
   transition: all .3s ease;
   cursor: pointer;
 }
-
 
 .contact__submit:hover {
   background-color: rgb(87, 101, 194);
