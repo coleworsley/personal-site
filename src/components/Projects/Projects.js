@@ -4,12 +4,14 @@ import './Projects.css';
 
 const projectArray = [
   {
-    title: 'Test',
+    title: 'Movie Tracker',
     description: 'This is the description',
+    image: './assets/movie-tracker.png',
   },
   {
-    title: 'Test',
-    description: 'This is the description',
+    title: 'Movie Tracker',
+    description: 'This is another description',
+    image: './assets/movie-tracker.mp4',
   },
 ];
 
