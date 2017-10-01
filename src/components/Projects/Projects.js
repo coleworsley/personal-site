@@ -1,14 +1,15 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import './Projects.css';
 
 const projectArray = [
   {
     title: 'Test',
-    content: 'This is the content',
+    description: 'This is the description',
   },
   {
     title: 'Test',
-    content: 'This is the content',
+    description: 'This is the description',
   },
 ];
 

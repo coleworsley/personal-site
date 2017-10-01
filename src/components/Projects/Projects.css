@@ -1,0 +1,11 @@
+.projects {
+  width: 100%;
+  padding: 10px 30px;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
