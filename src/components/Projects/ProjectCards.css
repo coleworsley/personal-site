@@ -1,0 +1,38 @@
+.project-card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.project-card__title {
+  font-size: 46px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.project-card__span {
+  display: block;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+/* Movie Tracker */
+#movie-tracker {
+  background-color: rgb(34, 34, 34);
+}
+
+#movie-tracker .project-card__title {
+  color: rgb(209, 209, 209);
+}
+
+#movie-tracker .project-card__span {
+  color: rgb(78, 155, 245);
+}
