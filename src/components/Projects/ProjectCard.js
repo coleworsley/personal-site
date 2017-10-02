@@ -1,16 +1,16 @@
 import React from 'react';
-import movieTracker from '../../assets/movie-tracker.mp4';
+import './ProjectCards.css';
 
 const ProjectCard = (props) => {
-  const { title, description, image } = props;
-  const cardStyle = {
-    backgroundImage: `url(${image})`,
-  };
+  const { id, title, description, image } = props;
 
   return (
-    <div className="project-card" style={cardStyle}>
-      <h3 className="project-card__title">{title}</h3>
-      <p className="project-card__content">{description}</p>
+    <div className="project-card" id={id || 'default'}>
+      <h3 className="project-card__title">
+        {title.text}
+        <span className="project-card__span"> {title.span}</span>
+      </h3>
+      {/* <p className="project-card__content">{description}</p> */}
     </div>
   );
 };
