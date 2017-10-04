@@ -2,7 +2,7 @@ import React from 'react';
 import './ProjectCards.css';
 
 const ProjectCard = (props) => {
-  const { id, title, description, image } = props;
+  const { id, title } = props;
 
   return (
     <div className="project-card" id={id || 'default'}>

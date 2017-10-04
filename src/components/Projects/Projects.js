@@ -13,11 +13,6 @@ const projectArray = [
     link: 'https://github.com/coleworsley/movie-tracker',
     image: './assets/movie-tracker.png',
   },
-  {
-    title: 'Movie Tracker',
-    description: 'This is another description',
-    image: './assets/movie-tracker.mp4',
-  },
 ];
 
 const Projects = () => {
