@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -8,27 +8,27 @@ const NavBar = () => {
       <h1 className="nav__title">CW</h1>
       <ul className="nav__list">
         <li>
-          <Link className="nav__link" to={`${process.env.PUBLIC_URL}/`}>
+          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/home`}>
             Welcome
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link className="nav__link" to={`${process.env.PUBLIC_URL}/about`}>
+          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/about`}>
             About
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link className="nav__link" to={`${process.env.PUBLIC_URL}/projects`}>
+          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/projects`}>
             Projects
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link className="nav__link" to={`${process.env.PUBLIC_URL}/contact`}>
+          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/contact`}>
             Contact
-          </Link>
+          </NavLink>
         </li>
 
         <li><a

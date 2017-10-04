@@ -24,12 +24,16 @@
   margin: 10px;
   padding: 5px;
   cursor: pointer;
-  border-radius: 5px;
   text-decoration: none;
   color: #303030;
+  border-bottom: 4px solid transparent;
 }
 
 .nav__link:hover {
   background-color: #D1D2D3;
   color: #FFF;
+}
+
+.nav__link.active {
+  border-color: #D1D2D3;
 }
