@@ -2,7 +2,7 @@ import React from 'react';
 import './ProjectCards.css';
 
 const ProjectCard = (props) => {
-  const { id, title } = props;
+  const { id, title, image } = props;
 
   return (
     <div className="project-card" id={id || 'default'}>
@@ -10,7 +10,11 @@ const ProjectCard = (props) => {
         {title.text}
         <span className="project-card__span"> {title.span}</span>
       </h3>
-      {/* <p className="project-card__content">{description}</p> */}
+      <img
+        className="project-card__image"
+        src={image}
+        alt={`${title.text} ${title.span}`}
+      />
     </div>
   );
 };

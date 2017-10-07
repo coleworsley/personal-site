@@ -24,6 +24,10 @@
   font-weight: 300;
 }
 
+.project-card__image {
+  width: 100%;
+}
+
 /* Movie Tracker */
 #movie-tracker {
   background-color: rgb(34, 34, 34);
