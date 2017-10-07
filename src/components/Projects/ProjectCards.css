@@ -2,26 +2,40 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
+  position: relative;
+  margin: 10px;
   border-radius: 5px;
+  height: 350px;
+  max-height: 350px;
+  overflow-y: hidden;
 }
 
+.project-card::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 .project-card__title {
   font-size: 46px;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  position: absolute;
+  z-index: 2;
+  height: 106px;
+  width: 100%;
+  left: 0;
+  top: 70px;
 }
 
 .project-card__span {
-  display: block;
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 300;
+  /*font-weight: 300;*/
 }
 
 .project-card__image {
@@ -29,14 +43,10 @@
 }
 
 /* Movie Tracker */
-#movie-tracker {
-  background-color: rgb(34, 34, 34);
-}
-
 #movie-tracker .project-card__title {
-  color: rgb(209, 209, 209);
+  color: #ffffff;
 }
 
 #movie-tracker .project-card__span {
-  color: rgb(78, 155, 245);
+  color: rgb(36, 155, 224)
 }
