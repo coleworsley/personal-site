@@ -13,6 +13,36 @@ const projectArray = [
     link: 'https://github.com/coleworsley/movie-tracker',
     image: './assets/movie-tracker.png',
   },
+  {
+    id: 'jet-fuel',
+    title: {
+      text: 'Jet',
+      span: 'Fuel',
+    },
+    description: '',
+    link: 'https://github.com/coleworsley/jet-fuel',
+    image: './assets/jet-fuel.png',
+  },
+  {
+    id: 'happy-hour-power',
+    title: {
+      text: 'Happy Hour',
+      span: 'Power',
+    },
+    description: '',
+    link: 'https://github.com/coleworsley/happy-hour-power',
+    image: './assets/happy-hour-power.png',
+  },
+  {
+    id: 'comp-challenge',
+    title: {
+      text: 'Comp',
+      span: 'Challenge',
+    },
+    description: '',
+    link: 'https://github.com/coleworsley/',
+    image: './assets/comp-challenge.png',
+  },
 ];
 
 const Projects = () => {
