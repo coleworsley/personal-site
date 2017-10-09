@@ -21,11 +21,3 @@
   transform: scale(1.1);
   box-shadow: 4px 4px 10px rgb(40, 40, 40);
 }
-
-.github {
-  background-image: url("/assets/github-logo.png");
-}
-
-.production {
-  background-image: url("/assets/production-logo.png");
-}

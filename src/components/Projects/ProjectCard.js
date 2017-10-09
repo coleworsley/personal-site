@@ -21,8 +21,14 @@ const ProjectCard = (props) => {
           </span>
         </h3>
         <div className="project-links">
-          <ProjectLink url={github} linkType="github" />
-          <ProjectLink url={production} linkType="production" />
+          <ProjectLink
+            url={github}
+            linkType="github"
+          />
+          <ProjectLink
+            url={production}
+            linkType="production"
+          />
         </div>
       </div>
     </div>
