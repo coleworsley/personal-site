@@ -3,8 +3,23 @@
   background-position: center;
   background-size: 500px;
   position: relative;
-  max-height: 350px;
   overflow-y: hidden;
+}
+
+.project-links {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 3;
+}
+
+.project-card:hover .project-links {
+  opacity: 1;
 }
 
 .project-card:before {
@@ -39,9 +54,6 @@
   /*font-weight: 300;*/
 }
 
-.project-card__image {
-  width: 100%;
-}
 
 /* Movie Tracker */
 #movie-tracker .project-card__title {
