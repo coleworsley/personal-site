@@ -20,10 +20,6 @@ a { text-decoration: none; color: inherit;}
 
 a:visited { text-decoration: none; color: inherit; }
 
-a:hover { text-decoration: none; color: blue; }
-
-a:focus { text-decoration: none; color: yellow; }
-
 .tab {
   transition: all 1s ease;
   animation-name: tab;
@@ -33,6 +29,10 @@ a:focus { text-decoration: none; color: yellow; }
 @keyframes tab {
   0% {
     transform: translateX(-250%);
+  }
+
+  70% {
+    transform: translateX(10%);
   }
 
   100% {

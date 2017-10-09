@@ -4,22 +4,12 @@
   background-size: 500px;
   position: relative;
   overflow-y: hidden;
+  transition: 1s;
 }
 
-.project-links {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 20px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0;
-  z-index: 3;
-}
-
-.project-card:hover .project-links {
-  opacity: 1;
+.project-card:hover {
+  z-index: 100;
+  box-shadow: inset 0px 0px 8px 4px rgb(40, 40, 40);
 }
 
 .project-card:before {
@@ -32,34 +22,119 @@
   bottom: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.7);
-  transition: .3s;
+  transition: 1s;
 }
 
-.project-card:hover:before {
+.project-card:hover:before,
+.project-card__content {
   opacity: 0;
 }
 
+.project-card__content {
+  transition: .7s;
+}
+
+.project-card:hover .project-card__content {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
 .project-card__title {
-  font-size: 46px;
+  font-size: 32px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 70px;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px 5px rgb(40, 40, 40);
+  margin: 10px 0;
+  z-index: 3;
 }
 
 .project-card__span {
-  /*font-weight: 300;*/
+  font-weight: 300;
 }
 
 
 /* Movie Tracker */
 #movie-tracker .project-card__title {
-  color: #ffffff;
+  color: #FFF;
 }
 
 #movie-tracker .project-card__span {
   color: rgb(36, 155, 224)
+}
+
+#jet-fuel .project-card__title {
+  color: #E55C39;
+}
+
+#jet-fuel .project-card__span {
+  color: #FFF;
+}
+
+#happy-hour-power .project-card__title {
+  background-color: #FFF;
+  color: #DAB23E;
+}
+
+#happy-hour-power .project-card__span {
+  color: #08354B;
+}
+
+#comp-challenge-3 .project-card__title {
+  color: #4CB3BB;
+}
+
+#comp-challenge-3 .project-card__span {
+  color: #E8EFF4;
+}
+
+#pattrn-party .project-card__title {
+  background-color: #3F3343;
+  color: #FFFFFF;
+}
+
+#pattrn-party .project-card__span {
+  color: #3FD1D0;
+}
+
+#swapi-box .project-card__title {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(40, 40, 40);
+}
+
+#weather-app .project-card__title {
+  background-color: #FFF;
+  color: rgb(70, 102, 201);
+}
+
+#weather-app .project-card__span {
+  color: rgb(49, 50, 50);
+}
+
+#breakout .project-card__title {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #23D62D;
+}
+
+#breakout .project-card__span {
+  color: #DD1278;
+}
+
+#craft-brewz .project-card__title {
+  background-color: #25292E;
+  color: #FFF;
+}
+
+#craft-brewz .project-card__span {
+  color: #FFF;
 }

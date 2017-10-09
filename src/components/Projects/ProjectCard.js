@@ -13,13 +13,17 @@ const ProjectCard = (props) => {
       id={id || 'default'}
       style={style}
     >
-      {/* <h3 className="project-card__title">
-        {title.text}
-        <span className="project-card__span"> {title.span}</span>
-      </h3> */}
+      <div className="project-card__content">
+        <h3 className="project-card__title">
+          {title.text}
+          <span className="project-card__span">
+            {title.span}
+          </span>
+        </h3>
       <div className="project-links">
         <ProjectLink url={github} linkType="github" />
         <ProjectLink url={production} linkType="production" />
+      </div>
       </div>
     </div>
   );

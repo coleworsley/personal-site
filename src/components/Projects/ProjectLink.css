@@ -9,11 +9,17 @@
   line-height: 40px;
   padding: 0 10px 0 40px;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgb(56, 56, 56);
+  box-shadow: 2px 2px 5px rgb(40, 40, 40);
   text-decoration: none;
   font-family: sans-serif;
   margin: 0 20px;
   text-transform: capitalize;
+  transition: all .3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px rgb(40, 40, 40);
 }
 
 .github {
