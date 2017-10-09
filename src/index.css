@@ -14,10 +14,11 @@ body {
   color: #303030;
 }
 
-ul {
-  list-style-type: none;
-}
+ul { list-style-type: none;}
 
+a { text-decoration: none; color: inherit;}
+
+a:visited { text-decoration: none; color: inherit; }
 
 .tab {
   transition: all 1s ease;
@@ -28,6 +29,10 @@ ul {
 @keyframes tab {
   0% {
     transform: translateX(-250%);
+  }
+
+  70% {
+    transform: translateX(10%);
   }
 
   100% {

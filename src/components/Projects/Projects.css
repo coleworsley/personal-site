@@ -1,14 +1,11 @@
 .projects {
   width: 100%;
+  height: calc(100vh - 80px);
   padding: 10px 30px;
   margin: 0 auto;
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
   background: transparent;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px 15px;
+  grid-template-rows: repeat(3, 1fr);
   justify-content: center;
 }
