@@ -1,14 +1,12 @@
 .about {
-  position: absolute;
-  top: 40%;
-  left: 15%;
+  margin: 0 auto;
   width: 70%;
   display: flex;
 }
 
 .about__image {
   float: left;
-  height: 150px;
+  height: 200px;
   border-radius: 5%;
   margin-right: 20px;
 }

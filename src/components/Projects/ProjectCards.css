@@ -1,15 +1,12 @@
 .project-card {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 500px;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   transition: 1s;
 }
 
 .project-card:hover {
   z-index: 100;
-  box-shadow: inset 0px 0px 8px 4px rgb(40, 40, 40);
+  box-shadow: 0px 0px 20px 4px rgb(40, 40, 40);
 }
 
 .project-card:before {
@@ -21,13 +18,30 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   transition: 1s;
 }
 
 .project-card:hover:before,
 .project-card__content {
   opacity: 0;
+}
+
+.project-card__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: .5s;
+}
+
+.project-card:hover .project-card__image {
+  filter: blur(5px);
 }
 
 .project-card__content {
