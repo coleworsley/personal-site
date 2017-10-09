@@ -59,4 +59,34 @@ export const projectArray = [
     link: 'https://github.com/coleworsley/',
     image: './assets/swapi-box.png',
   },
+  {
+    id: 'weather-app',
+    title: {
+      text: 'Weather',
+      span: 'App',
+    },
+    description: '',
+    link: 'https://github.com/coleworsley/',
+    image: './assets/weather-app.png',
+  },
+  {
+    id: 'breakout',
+    title: {
+      text: 'Break',
+      span: 'out',
+    },
+    description: '',
+    link: 'https://github.com/coleworsley/',
+    image: './assets/breakout.png',
+  },
+  {
+    id: 'craft-brewz',
+    title: {
+      text: 'Craft',
+      span: 'Brewz',
+    },
+    description: '',
+    link: 'https://github.com/coleworsley/',
+    image: './assets/craft-brewz.png',
+  },
 ];
