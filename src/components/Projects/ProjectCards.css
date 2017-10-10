@@ -2,10 +2,10 @@
   position: relative;
   overflow: hidden;
   transition: 1s;
+  z-index: 100;
 }
 
 .project-card:hover {
-  z-index: 100;
   box-shadow: 0px 0px 20px 4px rgb(40, 40, 40);
 }
 
