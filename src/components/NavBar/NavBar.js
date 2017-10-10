@@ -5,14 +5,10 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <nav className="nav">
-      <h1 className="nav__title">CW</h1>
+      <NavLink to={`${process.env.PUBLIC_URL}/`}>
+        <h1 className="nav__title">CW</h1>
+      </NavLink>
       <ul className="nav__list">
-        <li>
-          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/`}>
-            Welcome
-          </NavLink>
-        </li>
-
         <li>
           <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/about`}>
             About
