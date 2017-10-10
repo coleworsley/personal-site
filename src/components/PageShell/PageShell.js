@@ -2,8 +2,6 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './PageShell.css';
 
-const logo = '';
-
 const PageShell = (Page) => {
   return props => (
     <div className="page">

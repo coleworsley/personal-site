@@ -3,26 +3,14 @@
   overflow: hidden;
   transition: 1s;
   z-index: 100;
+  border: 1px solid rgb(140, 140, 140);
+  border-radius: 5px;
 }
 
 .project-card:hover {
   box-shadow: 0px 0px 20px 4px rgb(40, 40, 40);
 }
 
-.project-card:before {
-  content: '';
-  opacity: 1;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: 1s;
-}
-
-.project-card:hover:before,
 .project-card__content {
   opacity: 0;
 }
