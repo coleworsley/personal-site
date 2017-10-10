@@ -65,6 +65,21 @@ class Contact extends Component {
           />
           <input type="submit" value="Send" className="contact__submit" />
         </form>
+        <div className="contact-links">
+          <a
+            className="contact-links__link linkedin"
+            href="linkedin"
+          >
+            LinkedIn
+          </a>
+          <a
+            className="contact-links__link facebook"
+            href="facebook"
+          >
+            Facebook
+          </a>
+
+        </div>
       </div>
     );
   }

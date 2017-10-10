@@ -2,6 +2,7 @@
   margin: 0 auto;
   width: 70%;
   display: flex;
+  padding-top: 50px;
 }
 
 .about__image {

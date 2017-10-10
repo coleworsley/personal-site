@@ -20,10 +20,7 @@ class App extends Component {
       <div className="app">
         <NavBar />
         <Canvas />
-        <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => (
-          <Redirect to="/home"/>
-        )}/>
-        <Route exact path={`${process.env.PUBLIC_URL}/home`} component={Home} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
         <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
         <Route exact path={`${process.env.PUBLIC_URL}/projects`} component={Projects} />
         <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} />

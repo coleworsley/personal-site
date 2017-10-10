@@ -8,7 +8,7 @@ const NavBar = () => {
       <h1 className="nav__title">CW</h1>
       <ul className="nav__list">
         <li>
-          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/home`}>
+          <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/`}>
             Welcome
           </NavLink>
         </li>
