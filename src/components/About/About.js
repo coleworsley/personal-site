@@ -16,7 +16,7 @@ const About = () => {
         </div>
       </header>
       <div className="about__content">
-        <h1 className="about__title">A Little About Me</h1>
+        <h1 className="about__title">A Little About Me (or I guess a lot)</h1>
         <p className="about__paragraph">
           First and foremost, I am a web developer out of Denver, CO. At my core, I&apos;m a passionate problem solver who desires to find creative and innovative solutions to challenges.
         </p>
