@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section className="home tab">
       <h1 className="home-title">Cole Worsley</h1>
-      <p className="home-subtitle">Front End Developer</p>
+      <p className="home-subtitle">Software Developer</p>
     </section>
   );
 };

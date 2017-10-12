@@ -4,13 +4,19 @@ import './About.css';
 const About = () => {
   return (
     <section className="about tab">
-      <div className="about__content">
-        <h1 className="about__title">A Little About Me</h1>
+      <header className="about__header">
         <img
           className="about__image"
           src="./assets/ColeWorsley.jpg"
           alt="Photograph of Cole Worsley"
         />
+        <div className="about__name-box">
+          <h1 className="name">Cole Worsley</h1>
+          <p className="job-title">Software Developer</p>
+        </div>
+      </header>
+      <div className="about__content">
+        <h1 className="about__title">A Little About Me</h1>
         <p className="about__paragraph">
           First and foremost, I am a web developer out of Denver, CO. At my core, I&apos;m a passionate problem solver who desires to find creative and innovative solutions to challenges.
         </p>
