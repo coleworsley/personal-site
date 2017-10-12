@@ -15,6 +15,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(process.env.PUBLIC_URL);
     return (
       <div className="app">
         <NavBar />
@@ -22,7 +23,11 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => <Redirect to={`${process.env.PUBLIC_URL}/about`} />}
+          render={() => (
+            <Redirect
+              from={`${process.env.PUBLIC_URL}/`}
+              to={`${process.env.PUBLIC_URL}/about`}
+            />)}
         />
         <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
         <Route exact path={`${process.env.PUBLIC_URL}/projects`} component={Projects} />
