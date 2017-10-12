@@ -22,10 +22,9 @@ class App extends Component {
         <Canvas />
         <Route
           exact
-          path="/"
+          path={`${process.env.PUBLIC_URL}/`}
           render={() => (
             <Redirect
-              from={`${process.env.PUBLIC_URL}/`}
               to={`${process.env.PUBLIC_URL}/about`}
             />)}
         />
