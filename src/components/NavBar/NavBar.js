@@ -17,13 +17,18 @@ class NavBar extends Component {
 
   render() {
     const dropdown = this.state.showDropDown ? '' : ' hide';
+    const hamburger = { backgroundImage: 'url(/assets/hamburger.png)' };
 
     return (
       <nav className="nav">
         <NavLink to={`${process.env.PUBLIC_URL}/`}>
           <h1 className="nav__title">CW</h1>
         </NavLink>
-        <button className="hamburger" onClick={() => this.handleClick()} />
+        <button
+          className="hamburger"
+          onClick={() => this.handleClick()}
+          style={hamburger}
+        />
         <ul className={`nav__list${dropdown}`}>
           <li>
             <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}about`}>
@@ -43,12 +48,15 @@ class NavBar extends Component {
             </NavLink>
           </li>
 
-          <li><a
-            className="nav__link"
-            href="https://drive.google.com/file/d/0BxokiILyz4-MWS1rWVUwcVVhNm8/view?usp=sharing"
-          >
-            Resume
-          </a></li>
+          <li>
+            <a
+              className="nav__link"
+              href="https://drive.google.com/file/d/0BxokiILyz4-MWS1rWVUwcVVhNm8/view?usp=sharing"
+              target="_blank"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
       </nav>
     );
