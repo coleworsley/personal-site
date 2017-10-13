@@ -4,10 +4,22 @@
 
 .project__image {
   width: 800px;
+  box-shadow: 2px 2px 5px rgb(41, 41, 41);
+}
+
+.project-card__title {
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgb(41, 41, 41);
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Movie Tracker */
-#movie-tracker .project-card__title {
+/*#movie-tracker .project-card__title {
   color: #FFF;
 }
 
@@ -79,4 +91,4 @@
 
 #craft-brewz .project-card__span {
   color: #FFF;
-}
+}*/

@@ -5,19 +5,15 @@ import ProjectLink from './ProjectLink';
 const ProjectCard = (props) => {
   const { id, title, image, github, production } = props;
 
-  const style = { backgroundImage: `url(${image})` };
-
   return (
     <div
       className="project-card"
       id={id || 'default'}
     >
       <div className="project-card__content">
-        <h3 className="project-card__title">
+        <h3 className="title">
           {title.text}
-          <span className="project-card__span">
-            {title.span}
-          </span>
+          <span>{title.span}</span>
         </h3>
         <img
           className="project__image"

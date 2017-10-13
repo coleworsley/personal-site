@@ -1,0 +1,24 @@
+.arrow {
+  width: 80px;
+  height: 80px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.arrow.right {
+  transform: rotate(180deg);
+}
+
+.arrow-icon polyline {
+  transition: all 100ms ease-in-out;
+}
+
+.arrow:hover .arrow-icon polyline {
+  stroke-width: 3;
+}
+
+.arrow:active .arrow-icon polyline {
+  stroke-width: 6;
+}
