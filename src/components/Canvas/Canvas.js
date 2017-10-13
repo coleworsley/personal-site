@@ -73,7 +73,7 @@ export default class Canvas extends Component {
       this.updateParticles();
       this.timeInterval = newTime;
     }
-    requestAnimationFrame(() => {this.update()});
+    requestAnimationFrame(() => { this.update(); });
   }
 
   updateParticles() {
