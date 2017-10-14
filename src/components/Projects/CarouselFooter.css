@@ -2,9 +2,21 @@
   text-align: center;
   margin: 0 auto;
   width: 800px;
+  height: 130px;
   white-space: nowrap;
   overflow-x: scroll;
+  overflow-y: visible;
   position: relative;
+  vertical-align: middle;
+  background-image: linear-gradient(to right, white, white),
+  linear-gradient(to right, white, white),
+  linear-gradient(to right, rgba(0,0,0,.25), rgba(255,255,255,0)),
+  linear-gradient(to left, rgba(0,0,0,.25), rgba(255,255,255,0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
 .footer__card {
@@ -17,7 +29,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  transition: .2s;
+  transition: .3s;
   z-index: 0;
 }
 
@@ -33,7 +45,7 @@
   bottom: 0;
   right: 0;
   background-color: rgb(255, 255, 255);
-  opacity: .6;
+  opacity: .8;
 }
 
 .footer__card:hover,
@@ -41,9 +53,7 @@
   transform: scale(1.1);
 }
 
-.footer-card:hover:before,
-.footer-card-active:before {
+.footer__card:hover::before,
+.footer__card-active::before {
   opacity: 0;
-  z-index: -1;
-  display: none;
 }
