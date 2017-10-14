@@ -1,9 +1,10 @@
 .project-card {
-  /*width: 100%;*/
+  position: relative;
 }
 
 .project__image {
   width: 800px;
+  transition: .3s ease-in-out;
   box-shadow: 2px 2px 5px rgb(41, 41, 41);
 }
 
@@ -13,13 +14,43 @@
   text-shadow: 1px 1px 3px rgb(41, 41, 41);
 }
 
-.project-links {
+.project__content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .3s ease-in-out;
+}
+
+.project-card:active .project__image,
+.project-card:hover .project__image {
+  filter: blur(5px);
+  opacity: 0.85;
+}
+
+.project-card:active .project__content,
+.project-card:hover .project__content {
   display: flex;
+  opacity: 1;
+}
+
+.project__links {
+  display: flex;
+  transition: 1s ease;
   justify-content: space-around;
 }
 
-/* Movie Tracker */
-/*#movie-tracker .project-card__title {
+
+
+
+
+
+#movie-tracker .project-card__title {
   color: #FFF;
 }
 
@@ -91,4 +122,4 @@
 
 #craft-brewz .project-card__span {
   color: #FFF;
-}*/
+}

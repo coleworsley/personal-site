@@ -10,17 +10,18 @@ const ProjectCard = (props) => {
       className="project-card"
       id={id || 'default'}
     >
-      <div className="project-card__content">
+      <img
+        className="project__image"
+        src={image}
+        alt={`${title.text}${title.span}`}
+      />
+      <div className="project__content">
         <h3 className="title">
           {title.text}
           <span>{title.span}</span>
         </h3>
-        <img
-          className="project__image"
-          src={image}
-          alt={`${title.text}${title.span}`}
-        />
-        <div className="project-links">
+
+        <div className="project__links">
           <ProjectLink
             url={github}
             linkType="github"

@@ -30,11 +30,6 @@ a:visited { text-decoration: none; color: inherit; }
   animation-duration: 1s;
 }
 
-/*::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}*/
-
 @keyframes tab {
   0% {
     transform: translateX(-250%);

@@ -14,7 +14,7 @@
   font-family: sans-serif;
   margin: 0 20px;
   text-transform: capitalize;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
 }
 
 .project-link:hover {

@@ -31,7 +31,7 @@ class Projects extends Component {
   }
 
   goToProject(index) {
-    this.setState({ index })
+    this.setState({ index });
   }
 
   render() {
@@ -45,7 +45,7 @@ class Projects extends Component {
           { currentProject }
           <Arrow direction="right" handleClick={this.move} />
         </div>
-        <CarouselFooter projects={projectArray} index={index} goToProject={this.goToProject}/>
+        <CarouselFooter projects={projectArray} index={index} goToProject={this.goToProject} />
       </div>
     );
   }

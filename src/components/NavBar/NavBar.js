@@ -31,19 +31,19 @@ class NavBar extends Component {
         />
         <ul className={`nav__list${dropdown}`}>
           <li>
-            <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}about`}>
+            <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/about`}>
               About
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}projects`}>
+            <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/projects`}>
               Projects
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}contact`}>
+            <NavLink activeClassName="active" className="nav__link" to={`${process.env.PUBLIC_URL}/contact`}>
               Contact
             </NavLink>
           </li>
@@ -53,6 +53,7 @@ class NavBar extends Component {
               className="nav__link"
               href="https://drive.google.com/file/d/0BxokiILyz4-MWS1rWVUwcVVhNm8/view?usp=sharing"
               target="_blank"
+              rel="noreferrer noopener"
             >
               Resume
             </a>

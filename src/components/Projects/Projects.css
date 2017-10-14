@@ -1,7 +1,7 @@
 .projects {
   width: 100%;
   height: calc(100vh - 80px);
-  padding: 10px 30px;
+  padding: 0px 30px;
   margin: 0 auto;
   background: transparent;
 }
