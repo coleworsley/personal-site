@@ -35,7 +35,7 @@ const CarouselFooter = (props) => {
         tabIndex={0}
       >
         <h3 className="hover-text">
-          { title.text }{ title.span }
+          {`${title.text}${title.span}`}
         </h3>
 
       </div>
