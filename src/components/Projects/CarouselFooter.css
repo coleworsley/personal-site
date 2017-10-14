@@ -7,9 +7,43 @@
   position: relative;
 }
 
-.footer-image {
-  width: 150px;
-  padding: 10px;
-  margin: 5px;
+.footer__card {
   display: inline-block;
+  margin: 10px;
+  width: 150px;
+  height: 82px;
+  box-shadow: 2px 2px 5px rgb(100, 100, 100);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: .2s;
+  z-index: 0;
+}
+
+.footer__image {
+  width: 150px;
+}
+
+.footer__card::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  opacity: .6;
+}
+
+.footer__card:hover,
+.footer__card-active {
+  transform: scale(1.1);
+}
+
+.footer-card:hover:before,
+.footer-card-active:before {
+  opacity: 0;
+  z-index: -1;
+  display: none;
 }

@@ -1,20 +1,44 @@
 import React from 'react';
 import './CarouselFooter.css';
 
+
+function centerElement(projects, index) {
+  const node = document.querySelector(`.${projects[index].id}`);
+
+  if (node) {
+    const viewWidth = node.parentElement.clientWidth;
+    const nodeLeft = node.offsetLeft;
+    const nodeWidth = node.offsetWidth;
+
+    const center = nodeLeft + (nodeWidth / 2);
+    const frame = center - (viewWidth / 2);
+
+    node.parentElement.scrollTo(frame, 0);
+  }
+}
+
+
 const CarouselFooter = (props) => {
   const { projects, index, goToProject } = props;
   const cards = projects.map((project, i) => {
-    const active = index === i ? 'active' : null;
+    const active = index === i ? 'footer__card-active' : null;
     const { image, title, id } = project;
+    const style = { backgroundImage: `url(${image})` };
+    const className = `footer__card ${id} ${active}`;
 
     return (
-      <img
-        src={image}
-        alt={`${title.text}${title.span}`}
-        className={`footer-image ${id}`}
-        id={active}
+      <div
+        className={className}
         onClick={() => goToProject(i)}
-      />
+        style={style}
+        role="button"
+        tabIndex={0}
+      >
+        <h3 className="hover-text">
+          { title.text }{ title.span }
+        </h3>
+
+      </div>
     );
   });
 
@@ -26,22 +50,6 @@ const CarouselFooter = (props) => {
     </footer>
   );
 };
-
-function centerElement(projects, index) {
-  const node = document.querySelector(`.footer-image.${projects[index].id}`);
-
-  if (node) {
-    const totalWidth = node.parentElement.scrollWidth;
-    const viewWidth = node.parentElement.clientWidth;
-    const nodeLeft = node.offsetLeft;
-    const nodeWidth = node.offsetWidth;
-
-    const center = nodeLeft + (nodeWidth / 2);
-    const frame = center - (viewWidth / 2);
-
-    node.parentElement.scrollTo(frame, 0);
-  }
-}
 
 
 export default CarouselFooter;
