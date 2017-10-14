@@ -3,14 +3,21 @@ import './Arrow.css';
 
 const Arrow = ({ direction, handleClick }) => {
   const className = `arrow ${direction}`;
+  const value = direction === 'left' ? -1 : 1;
 
   return (
     <button
-      value={1}
+      value={value}
       className={className}
       onClick={e => handleClick(e)}
     >
-      <svg className="arrow-icon" width="60px" height="80px" viewBox="0 0 50 80" xmlSpace="preserve">
+      <svg
+        className="arrow-icon"
+        width="60px"
+        height="80px"
+        viewBox="0 0 50 80"
+        xmlSpace="preserve"
+      >
         <polyline
           fill="none"
           stroke="rgb(40, 40, 40)"
