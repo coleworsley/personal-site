@@ -4,10 +4,27 @@
   padding: 0px 30px;
   margin: 0 auto;
   background: transparent;
+  position: relative;
 }
 
 .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel__selection {
+  margin: 5px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .projects {
+    padding: 0px 10px;
+  }
+
+  .arrow.right,
+  .arrow.left {
+    margin: 0;
+  }
 }

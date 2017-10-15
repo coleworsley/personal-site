@@ -5,10 +5,20 @@
   padding: 0;
   background: transparent;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+}
+
+.arrow.left {
+  left: 0px;
+  margin-left: -100px;
 }
 
 .arrow.right {
   transform: rotate(180deg);
+  right: 0px;
+  margin-right: -100px;
 }
 
 .arrow-icon polyline {

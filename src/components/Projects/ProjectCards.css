@@ -1,11 +1,16 @@
 .project-card {
   position: relative;
+  width: auto;
+  text-align: center;
+  max-width: 800px;
+  width: 80%;
 }
 
 .project__image {
-  width: 800px;
+  display: block;
+  width: 100%;
   transition: .3s ease-in-out;
-  box-shadow: 2px 2px 5px rgb(41, 41, 41);
+  box-shadow: 1px 1px 5px 3px rgb(100, 100, 100);
 }
 
 .project-card__title {
@@ -16,8 +21,9 @@
 
 .project__content {
   display: none;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -40,86 +46,147 @@
 }
 
 .project__links {
+  margin-bottom: 10px;
   display: flex;
   transition: 1s ease;
   justify-content: space-around;
 }
 
+.project__title {
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  color: #fff;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px 5px rgb(40, 40, 40);
+  margin: 10px 0;
+  z-index: 3;
+}
+
+.project__description {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgb(40, 40, 40);
+}
+
+.project__span {
+  font-weight: 300;
+}
+
+@media (max-width: 650px) {
+  .project-card {
+    width: 100%;
+  }
+
+  .project__content {
+    position: static;
+    display: block;
+    opacity: 1
+  }
+
+  .project-card:active .project__image,
+  .project-card:hover .project__image {
+    filter: blur(0px);
+    opacity: 1.0;
+  }
+
+  .project-card:active .project__content,
+  .project-card:hover .project__content {
+    display: flex;
+    opacity: 1.0;
+  }
+
+  .project__title {
+    display: none;
+  }
+
+  .project__description {
+    box-shadow: none;
+  }
+
+  .project__description {
+    width: 100%;
+    background: transparent;
+    border-top: none;
+  }
+
+
+}
 
 
 
-
-
-#movie-tracker .project-card__title {
+/*#movie-tracker .project__title {
   color: #FFF;
 }
 
-#movie-tracker .project-card__span {
+#movie-tracker .project__span {
   color: rgb(36, 155, 224)
 }
 
-#jet-fuel .project-card__title {
+#jet-fuel .project__title {
   color: #E55C39;
 }
 
-#jet-fuel .project-card__span {
+#jet-fuel .project__span {
   color: #FFF;
 }
 
-#happy-hour-power .project-card__title {
+#happy-hour-power .project__title {
   background-color: #FFF;
   color: #DAB23E;
 }
 
-#happy-hour-power .project-card__span {
+#happy-hour-power .project__span {
   color: #08354B;
 }
 
-#comp-challenge-3 .project-card__title {
+#comp-challenge-3 .project__title {
   color: #4CB3BB;
 }
 
-#comp-challenge-3 .project-card__span {
+#comp-challenge-3 .project__span {
   color: #E8EFF4;
 }
 
-#pattrn-party .project-card__title {
+#pattrn-party .project__title {
   background-color: #3F3343;
   color: #FFFFFF;
 }
 
-#pattrn-party .project-card__span {
+#pattrn-party .project__span {
   color: #3FD1D0;
 }
 
-#swapi-box .project-card__title {
+#swapi-box .project__title {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgb(40, 40, 40);
 }
 
-#weather-app .project-card__title {
+#weather-app .project__title {
   background-color: #FFF;
   color: rgb(70, 102, 201);
 }
 
-#weather-app .project-card__span {
+#weather-app .project__span {
   color: rgb(49, 50, 50);
 }
 
-#breakout .project-card__title {
+#breakout .project__title {
   background-color: rgba(255, 255, 255, 0.9);
   color: #23D62D;
 }
 
-#breakout .project-card__span {
+#breakout .project__span {
   color: #DD1278;
 }
 
-#craft-brewz .project-card__title {
+#craft-brewz .project__title {
   background-color: #25292E;
   color: #FFF;
 }
 
-#craft-brewz .project-card__span {
+#craft-brewz .project__span {
   color: #FFF;
-}
+}*/

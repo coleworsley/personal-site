@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 import { projectArray } from '../../utils/constants';
-import Arrow from './Arrow';
 import CarouselFooter from './CarouselFooter';
 
 const initialState = {
-  projects: projectArray.map(project => <ProjectCard {...project} />),
+  projects: projectArray,
   index: 0,
 };
 
@@ -37,13 +36,13 @@ class Projects extends Component {
   render() {
     const { projects, index } = this.state;
     const currentProject = projects[index];
+    const selection = `${index + 1} out of ${projects.length}`;
 
     return (
       <div className="projects tab">
+        <p className="carousel__selection">{selection}</p>
         <div className="carousel">
-          <Arrow direction="left" handleClick={this.move} />
-          { currentProject }
-          <Arrow direction="right" handleClick={this.move} />
+          <ProjectCard {...projects[index]} handleClick={this.move}/>
         </div>
         <CarouselFooter projects={projectArray} index={index} goToProject={this.goToProject} />
       </div>
