@@ -102,4 +102,8 @@
     display: none;
   }
 
+  .nav__title,
+  .nav__list {
+    padding: 10px;
+  }
 }

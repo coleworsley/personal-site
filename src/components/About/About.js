@@ -4,17 +4,6 @@ import './About.css';
 const About = () => {
   return (
     <section className="about tab">
-      <header className="about__header">
-        <img
-          className="personal-picture"
-          src="./assets/ColeWorsley.jpg"
-          alt="Photograph of Cole Worsley"
-        />
-        <div className="name-box">
-          <h1 className="name">Cole Worsley</h1>
-          <p className="job-title">Software Developer</p>
-        </div>
-      </header>
       <div className="about__content">
         <h1 className="title">About</h1>
         <p className="paragraph">

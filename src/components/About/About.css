@@ -7,39 +7,12 @@
   width: 72%;
 }
 
-.about__header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 30px;
-}
-
-.personal-picture {
-  height: 200px;
-  border-radius: 5%;
-  float: left;
-}
-
-.name-box {
-  border-left: 1px solid rgb(100, 100, 100);
-  margin-left: 20px;
-  padding-left: 20px;
-}
-
-.name {
-  font-size: 64px;
-}
-
-.job-title {
-  font-size: 18px;
-  padding-left: 4px;
-}
-
 .title {
   line-height: 2em;
   margin-bottom: 10px;
   border-bottom: 1px solid rgb(100, 100, 100);
 }
+
 
 .paragraph {
   line-height: 1.5em;

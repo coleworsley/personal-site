@@ -5,6 +5,7 @@ import About from '../About/About';
 import NavBar from '../NavBar/NavBar';
 import Contact from '../Contact/Contact';
 import Projects from '../Projects/Projects';
+import Home from '../Home/Home';
 
 const initialState = {};
 
@@ -22,10 +23,11 @@ class App extends Component {
         <Route
           exact
           path={`${process.env.PUBLIC_URL}/`}
-          render={() => (
-            <Redirect
-              to={`${process.env.PUBLIC_URL}/about`}
-            />)}
+          component={Home}
+          // render={() => (
+          //   <Redirect
+          //     to={`${process.env.PUBLIC_URL}/`}
+          //   />)}
         />
         <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
         <Route exact path={`${process.env.PUBLIC_URL}/projects`} component={Projects} />
