@@ -9,8 +9,6 @@
 .project__image {
   display: block;
   width: 100%;
-  transition: .3s ease-in-out;
-  box-shadow: 1px 1px 5px 3px rgb(100, 100, 100);
 }
 
 .project-card__title {
@@ -31,6 +29,12 @@
   right: 0;
   bottom: 0;
   transition: .3s ease-in-out;
+}
+
+.carousel__image {
+  position: relative;
+  transition: .3s ease-in-out;
+  box-shadow: 2px 2px 5px rgb(40, 40, 40);
 }
 
 .project-card:active .project__image,

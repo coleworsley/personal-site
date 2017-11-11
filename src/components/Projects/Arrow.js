@@ -13,9 +13,9 @@ const Arrow = ({ direction, handleClick }) => {
     >
       <svg
         className="arrow-icon"
-        width="60px"
+        width="40px"
         height="80px"
-        viewBox="0 0 50 80"
+        viewBox="0 0 40 80"
         xmlSpace="preserve"
       >
         <polyline
@@ -24,12 +24,13 @@ const Arrow = ({ direction, handleClick }) => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          points="45.63,75.8 0.375,38.087 45.63,0.375"
+          points="10.0, 10.0 40.0, 40.0 10.0 70.0"
         />
       </svg>
     </button>
 
   );
 };
+// points="45.63,75.8 0.375,38.087 45.63,0.375"
 
 export default Arrow;

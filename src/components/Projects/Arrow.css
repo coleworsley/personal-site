@@ -11,12 +11,12 @@
 }
 
 .arrow.left {
+  transform: rotate(180deg);
   left: 0px;
   margin-left: -100px;
 }
 
 .arrow.right {
-  transform: rotate(180deg);
   right: 0px;
   margin-right: -100px;
 }

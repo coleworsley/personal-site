@@ -1,6 +1,7 @@
 import React from 'react';
 import './ProjectCards.css';
 import ProjectLink from './ProjectLink';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Arrow from './Arrow';
 
 const ProjectCard = (props) => {
@@ -19,15 +20,17 @@ const ProjectCard = (props) => {
       className="project-card"
       id={id || 'default'}
     >
-      <Arrow direction="left" handleClick={handleClick} />
+      <div className="carousel__image">
+        <Arrow direction="left" handleClick={handleClick} />
 
-      <img
-        className="project__image"
-        src={image}
-        alt={`${title.text}${title.span}`}
-      />
+        <img
+          className="project__image"
+          src={image}
+          alt={`${title.text}${title.span}`}
+        />
 
-      <Arrow direction="right" handleClick={handleClick} />
+        <Arrow direction="right" handleClick={handleClick} />
+      </div>
 
       <div className="project__content">
         <h3 className="project__title">
