@@ -9,8 +9,8 @@ export default class Particle {
   }
 
   move(size) {
-    let { height, width } = size;
-    const buffer = 50;
+    const { height, width } = size;
+    const buffer = 5;
     if (this.x + this.xVelocity >= width + buffer || this.x + this.xVelocity <= -buffer) {
       this.xVelocity = -this.xVelocity;
     }
@@ -26,13 +26,13 @@ export default class Particle {
 
   render(context, size) {
     // Move
-    this.move(size)
+    this.move(size);
 
     // Draw
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
     // context.fillStyle = '#fff';
-    context.fillStyle = 'rgb(34, 34, 34)'
+    context.fillStyle = 'rgb(34, 34, 34)';
     context.fill();
     context.closePath();
   }

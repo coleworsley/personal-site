@@ -25,10 +25,14 @@ export default class Canvas extends Component {
       context: null,
     };
     this.particles = [];
+    this.velocity = {
+      min: 0.2,
+      max: 0.6,
+    }
     this.minVelocity = 0.2;
     this.maxVelocity = 0.6;
     this.maxRadius = 0.5;
-    this.padding = -50;
+    this.padding = -5;
     this.fps = 50;
     this.timeInterval = new Date();
   }
@@ -36,7 +40,9 @@ export default class Canvas extends Component {
   componentDidMount() {
     const context = this.refs.canvas.getContext('2d');
     this.createParticles(100);
-    requestAnimationFrame(() => { this.update(); });
+    requestAnimationFrame(() => {
+      this.update();
+    });
     this.setState({ context });
   }
 
@@ -69,8 +75,9 @@ export default class Canvas extends Component {
 
     if (newTime - this.timeInterval > 1000 / this.fps) {
       context.clearRect(0, 0, width, height);
-      this.drawLines(context);
+
       this.updateParticles();
+      this.drawLines(context);
       this.timeInterval = newTime;
     }
     requestAnimationFrame(() => { this.update(); });
@@ -96,12 +103,17 @@ export default class Canvas extends Component {
           y: innerP.y,
         };
       });
+      // particle does not have .closest that contains a reference to currentP
 
-      currentP.closest = currentArr
-        .filter(particle => particle.distance < 150)
-        .map(particle => Object.assign(particle, {
+      currentP.closest = currentArr.filter((particle) => {
+        return particle.distance < 150 &&
+               !((particle.x === currentP.x) && (particle.y === currentP.y));
+
+      }).map((particle) => {
+        return Object.assign(particle, {
           opacity: (1 - (particle.distance / 150)) / 2,
-        }));
+        });
+      });
     });
   }
 
