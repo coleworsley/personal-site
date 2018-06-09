@@ -28,7 +28,7 @@ export default class Canvas extends Component {
     this.velocity = {
       min: 0.2,
       max: 0.6,
-    }
+    };
     this.minVelocity = 0.2;
     this.maxVelocity = 0.6;
     this.maxRadius = 0.5;
@@ -80,7 +80,7 @@ export default class Canvas extends Component {
       this.drawLines(context);
       this.timeInterval = newTime;
     }
-    requestAnimationFrame(() => { this.update(); });
+    requestAnim2ationFrame(() => { this.update(); });
   }
 
   updateParticles() {
