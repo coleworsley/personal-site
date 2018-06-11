@@ -1,8 +1,8 @@
+/* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter } from 'react-router-dom';
-import App from './components/App/App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './App';
 import './index.css';
 
 ReactDOM.render(
@@ -10,4 +10,3 @@ ReactDOM.render(
     <Route path="/" component={App} />
   </BrowserRouter>,
   document.getElementById('root'));
-registerServiceWorker();

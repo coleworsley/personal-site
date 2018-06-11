@@ -80,7 +80,7 @@ export default class Canvas extends Component {
       this.drawLines(context);
       this.timeInterval = newTime;
     }
-    requestAnim2ationFrame(() => { this.update(); });
+    requestAnimationFrame(() => { this.update(); });
   }
 
   updateParticles() {
