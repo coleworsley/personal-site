@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Canvas from './components/Canvas';
-import NavBar from './components/NavBar';
+import NavBar from './components/Navigation';
 
 const initialState = {};
 
@@ -15,18 +15,6 @@ class App extends Component {
       <div className="app">
         <NavBar />
         <Canvas />
-        {/* <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/`}
-          component={Home}
-          // render={() => (
-          //   <Redirect
-          //     to={`${process.env.PUBLIC_URL}/`}
-          //   />)}
-        /> */}
-        {/* <Route path={`${process.env.PUBLIC_URL}/about`} component={About} /> */}
-        {/* <Route exact path={`${process.env.PUBLIC_URL}/projects`} component={Projects} /> */}
-        {/* <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} /> */}
       </div>
     );
   }
