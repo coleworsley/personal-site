@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MenuButton from './MenuButton';
 import Dropdown from './Dropdown';
+import './index.css';
 
 const initialState = { menuActive: false };
 
@@ -19,7 +20,7 @@ class NavBar extends Component {
     const { menuActive } = this.state;
 
     return (
-      <nav className="nav">
+      <nav className="navigation-bar">
         <MenuButton handleClick={this.handleClick} active={menuActive} />
         <Dropdown active={menuActive} />
       </nav>

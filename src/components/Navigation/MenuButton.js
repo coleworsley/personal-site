@@ -7,12 +7,11 @@ const MenuButton = (props) => {
 
   return (
     <div
-      className="menu-button"
-      onClick={() => handleClick()}
+      className="menu-button clearfix"
       role="button"
       tabIndex="0"
     >
-      <div className={`hamburger ${className}`}>
+      <div className={`hamburger ${className}`} onClick={() => handleClick()}>
         <span className="line" />
         <span className="line" />
         <span className="line" />

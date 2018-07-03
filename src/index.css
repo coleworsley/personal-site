@@ -30,6 +30,12 @@ a:visited { text-decoration: none; color: inherit; }
   animation-duration: 1s;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 @keyframes tab {
   0% {
     transform: translateX(-250%);
