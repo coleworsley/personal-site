@@ -1,8 +1,42 @@
 .dropdown {
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: all 0.3s ease-in-out;
 }
 
-.dropdown-inactive {
-  display: none;
+.dropdown.inactive {
+  padding: 0 10px;
+  opacity: 0;
+}
+
+.dropdown.inactive .dropdown__link {
+  font-size: 0;
+  margin: 0 10px;
+}
+
+.dropdown__link {
+  height: auto;
+  margin: 10px;
+  background: transparent;
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (min-width: 500px) {
+  .dropdown {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .dropdown.inactive {
+    opacity: 1;
+  }
+
+  .dropdown.inactive .dropdown__link {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
 }
