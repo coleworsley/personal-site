@@ -1,0 +1,4 @@
+.home {
+  height: Calc(100vh - 70px);
+  background-color: rgba(226, 71, 75, 0.49);
+}
