@@ -1,6 +1,18 @@
 .navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
   background-color: rgba(255, 255, 255);
   box-shadow: 2px 2px 4px rgb(47, 47, 47);
   height: 70px;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-title {
+  margin-left: 5px;
 }

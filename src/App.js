@@ -14,10 +14,10 @@ class App extends Component {
     this.state = initialState;
   }
 
+  // <Canvas />
   render() {
     return (
       <div className="app">
-        <Canvas />
         <NavBar />
         <Home />
         <About />

@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from '../HigherOrder/Section';
 
 const Portfolio = () => {
   return (
@@ -8,4 +9,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Section(Portfolio, 'portfolio');

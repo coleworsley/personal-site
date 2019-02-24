@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from '../HigherOrder/Section';
 
 const About = () => {
   return (
@@ -8,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Section(About);

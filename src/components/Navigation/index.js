@@ -21,8 +21,11 @@ class NavBar extends Component {
 
     return (
       <nav className="navigation-bar">
-        <MenuButton handleClick={this.handleClick} active={menuActive} />
-        <Dropdown active={menuActive} />
+        <h1 className="navigation-title">CW</h1>
+        <div className="navigation-menu">
+          <MenuButton handleClick={this.handleClick} active={menuActive} />
+          <Dropdown active={menuActive} />
+        </div>
       </nav>
     );
   }

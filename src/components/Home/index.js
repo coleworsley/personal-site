@@ -4,13 +4,16 @@ import './index.css';
 
 const Home = () => {
   return (
-    <section className="home">
-      <div>
-        <h1>Hi! My Name is <span>Cole Worsley</span></h1>
-        <p>I&apos;m a software developer out of Denver, CO</p>
+    <div className="home">
+      <div className="content">
+        <h1 className="content__title">Hi! I&apos;m <span>Cole Worsley</span></h1>
+        <p className="content__text">I&apos;m a software developer out of Denver, CO</p>
       </div>
-    </section>
+      <div className="button-container">
+        <button>See my Work</button>
+      </div>
+    </div>
   );
 };
 
-export default Section(Home);
+export default Section(Home, 'home-wrapper');

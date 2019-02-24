@@ -8,7 +8,7 @@ export default class Line {
   }
 
   move(size) {
-    const { height, width } = size
+    const { height, width } = size;
     if (this.x + this.xVelocity >= width || this.x + this.xVelocity <= 0) {
       this.xVelocity = -this.xVelocity;
     }
@@ -25,8 +25,8 @@ export default class Line {
   render(context, p) {
     context.beginPath();
     context.moveTo(p.x, p.y);
-    context.lineTo(nextP.x, nextP.y);
-    context.strokeStyle="rgba(152, 152, 196, 1)";
+    // context.lineTo(nextP.x, nextP.y);
+    // context.strokeStyle="rgba(152, 152, 196, 1)";
     context.stroke();
   }
 }

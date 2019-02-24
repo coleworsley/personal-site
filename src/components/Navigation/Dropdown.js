@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './Dropdown.css'
+import './Dropdown.css';
 
 const Dropdown = (props) => {
   const { active } = props;

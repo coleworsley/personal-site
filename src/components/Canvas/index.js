@@ -43,7 +43,7 @@ export default class Canvas extends Component {
     requestAnimationFrame(() => {
       this.update();
     });
-    this.setState({ context });
+    this.state.context = context;
   }
 
   createParticles(count) {
